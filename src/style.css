@@ -3,9 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+ @layer base {
+     body {
+         @apply scrollbar-thin scrollbar-thumb-white scrollbar-track-pink-500 scrollbar-thumb-rounded-full
+     }
+ }
+
 body {
     overflow-x: hidden;
 }
+
 
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

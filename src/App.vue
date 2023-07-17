@@ -1,7 +1,7 @@
 <script setup>
 import NavBar from "./components/Navbar.vue";
 import Slider from "./components/slider/Slider.vue";
-import Main from "./Main.vue";
+import Main from "./views/Main.vue";
 </script>
 
 <template>

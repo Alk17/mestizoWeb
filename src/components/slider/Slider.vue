@@ -52,7 +52,7 @@ function switchInterval() {
   interval = setInterval(() => {
     next();
     slide = true;
-  }, 1000)
+  }, 2000)
 }
 
 function getPosition(index) {
@@ -67,23 +67,23 @@ function getPosition(index) {
 </script>
 
 <template>
-  <div class="grid grid-cols-3">
+  <div class="grid grid-cols-1 md:grid-cols-3">
     <div v-for="(slide, index) in slides" :class="{
-       'order-1': getPosition(index) === 'L',
-       'order-2': getPosition(index) === 'C',
-       'order-3': getPosition(index) === 'R',
+       'order-1 transition -translate-x-full': getPosition(index) === 'L',
+       'order-2 transition -translate-x-full': getPosition(index) === 'C',
+       'order-3 ': getPosition(index) === 'R',
        'hidden': getPosition(index) == null,
     }">
-      <Card class="transform transition-all duration-700 ease-in-out"
+      <Card class="transition-all duration-700"
             :key="index"
             :description="slide.description"
             :image="slide.image"
             :title="slide.title"
             :class="{
-              'transition-all duration-700': true,
+              '': true,
               'scale-110 z-10': activeSlide === index,
               'scale-100 z-0': activeSlide !== index,
-              'transform -translate-x-50 duration-700 ease-in-out': slide
+              'translate-x-full': slide
             }"
       />
     </div>

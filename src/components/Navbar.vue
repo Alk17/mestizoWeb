@@ -4,7 +4,7 @@
 
 <template>
   <header>
-    <nav class="fixed w-full z-20 top-0 left-0">
+    <nav class="fixed w-full z-20 top-0 left-0 backdrop-blur-lg">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 px-16">
         <a class="flex items-center" href="">
           <img alt="Logo" class="h-12 mr-5" src="../assets/images/BlackLogo.png">
