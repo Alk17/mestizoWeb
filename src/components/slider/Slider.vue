@@ -67,26 +67,38 @@ function getPosition(index) {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-3">
-    <div v-for="(slide, index) in slides" :class="{
+  <div class="text-center">
+    <h1 class="text-2xl font-bold">¡Disfrúta de la variedad y frescura!</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 mt-12">
+      <div v-for="(slide, index) in slides" :class="{
        'order-1 transition -translate-x-full': getPosition(index) === 'L',
        'order-2 transition -translate-x-full': getPosition(index) === 'C',
        'order-3 ': getPosition(index) === 'R',
        'hidden': getPosition(index) == null,
     }">
-      <Card class="transition-all duration-700"
-            :key="index"
-            :description="slide.description"
-            :image="slide.image"
-            :title="slide.title"
-            :class="{
+        <Card :key="index"
+              :class="{
               '': true,
               'scale-110 z-10': activeSlide === index,
               'scale-100 z-0': activeSlide !== index,
               'translate-x-full': slide
             }"
-      />
+              :description="slide.description"
+              :image="slide.image"
+              :title="slide.title"
+              class="transition-all duration-700"
+        />
+      </div>
+
+
     </div>
+      <p class="mt-16">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare euismod luctus. Ut suscipit, ligula
+        quis mollis semper, purus nisi elementum erat, quis eleifend risus magna sit amet felis. Morbi nec velit sed
+        magna vulputate eleifend. Duis tempus nibh vitae nisi sollicitudin tempor. Morbi condimentum aliquet urna, a
+        congue urna vestibulum vel
+      </p>
   </div>
 </template>
 

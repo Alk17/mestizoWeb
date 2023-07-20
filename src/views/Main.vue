@@ -9,19 +9,21 @@ const count = ref(0)
 </script>
 
 <template>
-  <div class="w-screen h-screen grid grid-cols-2 place-content-center">
-    <div>
-      <h1 class="font-poppins font-extrabold text-5xl uppercase">Recargate</h1>
-      <h1 class="font-poppins font-extrabold text-5xl uppercase">naturalmente</h1>
-      <p class="mt-5">
+  <div class="w-screen h-screen grid grid-cols-12 place-content-center">
+    <div class="col-span-10 col-start-2 lg:col-span-6 space-y-10">
+      <div>
+        <h1 class="font-poppins font-extrabold text-5xl uppercase">Recargate</h1>
+        <h1 class="font-poppins font-extrabold text-4xl sm:text-5xl uppercase">naturalmente</h1>
+      </div>
+      <p>
         Disfruta las cinco opciones especialmente creadas para diversificar tu paladar brindandote
         la frescura de un delicioso café helado en cualquier momento y lugar.
       </p>
-      <p class="mt-4">
+      <p>
         <a href="">Menú</a>
       </p>
     </div>
-    <div class="">
+    <div class="col-span-10 col-start-2 md:col-span-4">
       <img class="transform -rotate-12 h-80" src="/images/BlackMorning.png">
     </div>
   </div>

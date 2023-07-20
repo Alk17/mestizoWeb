@@ -13,8 +13,11 @@
 
         <div class="items-center justify-between hidden w-full md:flex md:w-auto">
           <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
-            <li >fdas</li>
-            <li label="About" to="/about"/>
+            <li class="font-extrabold">Conócenos</li>
+            <li class="font-extrabold">Valor agregado</li>
+           <!-- <li label="About" to="/about"/>-->
+            <li class="font-extrabold">Nuestro café</li>
+            <li class="font-extrabold">Contacto</li>
           </ul>
         </div>
       </div>

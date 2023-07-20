@@ -12,6 +12,10 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         syne: ['Syne', 'sans-serif'],
         zilla: ['Zilla Slab', 'serif']
+      },
+      backgroundImage: {
+        'blob1': "url('/src/assets/images/blob1.svg')",
+        'coffeeGrains': "url('./assets/images/CoffeeGrains.jpg')"
       }
     },
   },
