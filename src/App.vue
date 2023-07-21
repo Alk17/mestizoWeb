@@ -10,10 +10,8 @@ import Footer from "./components/Footer.vue";
   <div class="font-montserrat font-light">
 
     <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-      <NavBar class="pb-20"/>
-      <div class="max-w-6xl w-screen px-10 mx-auto">
-        <Main/>
-      </div>
+      <NavBar/>
+      <Main/>
     </div>
 
     <div class="grid grid-cols-12">
@@ -62,6 +60,8 @@ import Footer from "./components/Footer.vue";
       </div>
     </div>
   </div>
+
+
 
   <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-20">
     <Footer/>

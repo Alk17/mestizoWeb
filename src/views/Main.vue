@@ -9,22 +9,25 @@ const count = ref(0)
 </script>
 
 <template>
-  <div class="w-screen h-screen grid grid-cols-12 place-content-center">
-    <div class="col-span-10 col-start-2 lg:col-span-6 space-y-10">
-      <div>
-        <h1 class="font-poppins font-extrabold text-5xl uppercase">Recargate</h1>
-        <h1 class="font-poppins font-extrabold text-4xl sm:text-5xl uppercase">naturalmente</h1>
+  <div class="max-w-screen-2xl w-screen px-10 mx-auto h-screen grid grid-cols-10 place-content-center">
+    <div class="col-span-4 lg:col-span-6 xl:col-span-5 flex items-center">
+      <div class="space-y-10">
+        <div class="font-poppins font-extrabold uppercase text-6xl">
+          <h1>Recargate</h1>
+          <h1>naturalmente</h1>
+        </div>
+        <p>
+          Disfruta las cinco opciones especialmente creadas para diversificar tu paladar brindándote
+          la frescura de un delicioso café helado en cualquier momento y lugar.
+        </p>
+        <div class="">
+          <button class="bg-transparent p-3 px-12 border border-amber-800 rounded-full hover:ring hover:ring-amber-100">Menú</button>
+        </div>
       </div>
-      <p>
-        Disfruta las cinco opciones especialmente creadas para diversificar tu paladar brindandote
-        la frescura de un delicioso café helado en cualquier momento y lugar.
-      </p>
-      <p>
-        <a href="">Menú</a>
-      </p>
     </div>
-    <div class="col-span-10 col-start-2 md:col-span-4">
-      <img class="transform -rotate-12 h-80" src="/images/BlackMorning.png">
+
+    <div class="col-span-4 lg:col-span-4 xl:col-span-5">
+      <img class="transform -rotate-12 h-[14rem] lg:h-[28rem] xl:h-[46rem] mx-auto" src="/images/BlackMorning.png">
     </div>
   </div>
 
@@ -42,7 +45,7 @@ const count = ref(0)
 <style scoped>
 .wave {
   position: absolute;
-  bottom: -81px;
+  bottom: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;

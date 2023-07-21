@@ -5,26 +5,20 @@
 <template>
 
   <footer>
+    <div class="wave1">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+    </div>
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-          <a href="https://flowbite.com/" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-          </a>
+          <a href="" class="flex items-center">
+            <img src="../assets/images/BlackLogoSlogan.png"
+                 class="h-16 mr-3" alt="FlowBite Logo" />
+       </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-          <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-              <li class="mb-4">
-                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-              </li>
-              <li>
-                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-              </li>
-            </ul>
-          </div>
           <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -50,9 +44,7 @@
         </div>
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-          </span>
+      <div class="sm:flex sm:items-center sm:justify-end">
         <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
           <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
@@ -86,5 +78,24 @@
 </template>
 
 <style scoped>
+.wave1 {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
+.wave1 svg {
+  position: relative;
+  display: block;
+  width: calc(162% + 1.3px);
+  height: 56px;
+}
+
+.wave1 .shape-fill {
+  fill: #FFFFFF;
+}
 </style>
