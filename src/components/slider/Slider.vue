@@ -10,25 +10,25 @@ const slides = [{
   title: "Black morning",
   description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
   image: "BlackMorning.png"
-},
+  },
   {
     title: "Choco Latte",
-    description: "Bebida  de café con leche y un toque de chocolate para endulzar tu paladar.",
+    description: "Bebida de café con leche con un delicioso toque de chocolate puro como acentuador del sabor.",
     image: "ChocoLatte.png"
   },
   {
     title: "K Puccino",
-    description: "Bebida  de café con leche y un toque de chocolate para endulzar tu paladar.",
+    description: "Bebida de café con leche, bajo en grasa para los amantes de los cappuccinos.",
     image: "Kpuccino.png"
   },
   {
     title: "Mistik Ccinno",
-    description: "Bebida  de café con leche y un toque de chocolate para endulzar tu paladar.",
+    description: "Bebida de café con leche natural de almendras, panela y un desafiante toque de canela.",
     image: "MistikCcino.png"
   },
   {
     title: "Skimmed Milk",
-    description: "Bebida  de café con leche y un toque de chocolate para endulzar tu paladar.",
+    description: "Bebida de café con leche descremada, para disfrutar sin preocupaciones.",
     image: "SkimmedMilk.png"
   }]
 
@@ -67,10 +67,16 @@ function getPosition(index) {
 </script>
 
 <template>
-  <div class="text-center">
-    <h1 class="text-3xl font-bold">¡Disfrúta de la variedad y frescura!</h1>
+  <div class="text-center grid grid-cols-12">
+    <div class="col-span-10 col-start-2 inline-flex items-center justify-center w-full">
+      <hr class="w-full h-px my-8 bg-[#ff5192] border-0">
+      <span class="absolute px-6 text-gray-900 bg-white text-3xl font-bold text-end
+      ">¡Disfrúta de la variedad y frescura!</span>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 mt-12">
+    <div class="col-span-10 col-start-2">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 mt-20">
       <div v-for="(slide, index) in slides" :class="{
        'order-1': getPosition(index) === 'L',
        'order-2': getPosition(index) === 'C',
@@ -88,16 +94,9 @@ function getPosition(index) {
               :title="slide.title"
               class=""
         />
-      </div>
-
-
     </div>
-    <p class="mt-16">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare euismod luctus. Ut suscipit, ligula
-      quis mollis semper, purus nisi elementum erat, quis eleifend risus magna sit amet felis. Morbi nec velit sed
-      magna vulputate eleifend. Duis tempus nibh vitae nisi sollicitudin tempor. Morbi condimentum aliquet urna, a
-      congue urna vestibulum vel
-    </p>
+      </div>
+    </div>
   </div>
 </template>
 

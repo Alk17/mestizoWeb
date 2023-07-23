@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="grid justify-items-center content-end relative h-[26.5rem] ">
+  <div class="grid justify-items-center content-end relative h-[29rem] ">
     <div class="absolute z-10">
       <img :src="'images/' + image" alt="Beverage" class="w-auto h-[20rem]">
     </div>

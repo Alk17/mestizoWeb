@@ -5,7 +5,7 @@
 
  @layer base {
      body {
-         @apply scrollbar-thin scrollbar-thumb-white scrollbar-track-pink-500 scrollbar-thumb-rounded-full
+         @apply scrollbar-thin scrollbar-thumb-white scrollbar-track-[#ff5192] scrollbar-thumb-rounded-full
      }
  }
 
