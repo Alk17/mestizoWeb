@@ -27,7 +27,3 @@ import MeetUs from "./views/MeetUs.vue";
 
 </template>
 
-<style scoped>
-
-
-</style>
