@@ -1,4 +1,20 @@
 <script setup>
+import {onMounted, ref} from "vue";
+
+const scrollPosition = ref(null);
+let mainDivider = null;
+
+function updateScroll() {
+  let dividerBounding = mainDivider.getBoundingClientRect();
+  scrollPosition.value = dividerBounding.y + dividerBounding.height - 60;
+}
+
+onMounted( () => {
+  mainDivider = document.getElementById('nav-divider');
+  window.addEventListener('scroll', updateScroll);
+})
+
+
 
 </script>
 
@@ -15,7 +31,11 @@
             </a>
 
             <div class="items-center justify-between hidden w-full md:flex md:w-auto">
-              <ul class="flex  text-white p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 font-medium">
+              <ul class="flex p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 font-medium"
+              :class="{
+                'text-white' : scrollPosition >= 0,
+                'text-black' : scrollPosition < 0
+              }">
                 <li>
                   <a href="#conocenos">Conócenos</a>
                 </li>
@@ -36,7 +56,3 @@
     </nav>
   </header>
 </template>
-
-<style scoped>
-
-</style>
