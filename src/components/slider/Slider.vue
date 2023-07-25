@@ -7,9 +7,9 @@ const activeSlide = ref(1);
 let slide = false;
 
 const slides = [{
-  title: "Black morning",
-  description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
-  image: "BlackMorning.png"
+    title: "Black morning",
+    description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
+    image: "BlackMorning.png"
   },
   {
     title: "Choco Latte",
@@ -67,7 +67,7 @@ function getPosition(index) {
 </script>
 
 <template>
-  <div class="text-center grid grid-cols-12">
+  <div class="text-center grid grid-cols-12 max-w-screen-2xl mx-auto">
     <div class="col-span-10 col-start-2 inline-flex items-center justify-center w-full">
       <hr class="w-full h-px my-8 bg-[#ff5192] border-0">
       <span class="absolute px-6 text-gray-900 bg-white text-3xl font-bold text-end
@@ -75,31 +75,26 @@ function getPosition(index) {
     </div>
 
     <div class="col-span-10 col-start-2">
-
-    <div class="grid grid-cols-1 md:grid-cols-3 mt-20">
-      <div v-for="(slide, index) in slides" :class="{
-       'order-1': getPosition(index) === 'L',
-       'order-2': getPosition(index) === 'C',
-       'order-3': getPosition(index) === 'R',
-       'hidden ': getPosition(index) == null,
+      <div class="grid grid-cols-1 md:grid-cols-3 mt-24">
+        <div v-for="(slide, index) in slides" :class="{
+       'order-1 transition -translate-x-full': getPosition(index) === 'L',
+       'order-2 transition -translate-x-full': getPosition(index) === 'C',
+       'order-3 transition -translate-x-full': getPosition(index) === 'R',
+       'hidden': getPosition(index) == null,
         }">
-        <Card :key="index"
-              :class="{
+          <Card :key="index"
+                :class="{
               'scale-110 z-10': activeSlide === index,
               'scale-100 z-0': activeSlide !== index,
-              '': slide
+              'translate-x-full': slide
             }"
-              :description="slide.description"
-              :image="slide.image"
-              :title="slide.title"
-              class=""
-        />
-    </div>
+                :description="slide.description"
+                :image="slide.image"
+                :title="slide.title"
+                class=""
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>

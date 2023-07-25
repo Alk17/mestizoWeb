@@ -18,10 +18,10 @@ import MeetUs from "./views/MeetUs.vue";
       </div>
     </div>
 
-    <AboutUs id="conocenos" class="mt-16 scroll-mt-[80px]"/>
-    <Slider id="nuestrocafe" class="mt-16"/>
-    <ValueAdded id="valoragregado" class="mt-16"/>
-    <MeetUs id="encuentranos" class="mt-16"/>
+    <AboutUs id="conocenos" class="mt-10 md:mt-20 scroll-mt-[80px]"/>
+    <Slider id="nuestrocafe" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
+    <ValueAdded id="valoragregado" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
+    <MeetUs id="encuentranos" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
     <Footer/>
   </div>
 

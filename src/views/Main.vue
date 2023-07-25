@@ -1,18 +1,16 @@
 <script setup>
-import {ref} from 'vue'
 
 defineProps({
   msg: String,
 })
 
-const count = ref(0)
 </script>
 
 <template>
       <div class="max-w-screen-2xl mx-auto h-screen grid grid-cols-10 place-content-center">
-        <div class="col-span-4 lg:col-span-6 xl:col-span-5 flex items-center">
-          <div class="space-y-10">
-            <div class="font-poppins font-extrabold uppercase text-6xl text-white">
+        <div class="col-span-10 md:col-span-4 lg:col-span-6 xl:col-span-5">
+          <div class="space-y-10  mt-12 md:mt-0">
+            <div class="font-poppins font-extrabold uppercase text-4xl md:text-6xl text-white">
               <h1>Recargate</h1>
               <h1>naturalmente</h1>
             </div>
@@ -20,7 +18,7 @@ const count = ref(0)
               Disfruta las cinco opciones especialmente creadas para diversificar tu paladar brindándote
               la frescura de un delicioso café helado en cualquier momento y lugar.
             </p>
-            <div class="">
+            <div class="text-end md:text-start">
               <button class="bg-transparent p-2.5 px-14 rounded-full
           outline outline-2 outline-offset-2 outline-white text-white font-poppins
           hover:bg-white hover:text-black
@@ -37,7 +35,7 @@ const count = ref(0)
         </div>
       </div>
 
-      <div class="divider-bottom">
+      <div id="nav-divider" class="divider-bottom">
         <svg data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
           <rect height="3.6" x="1200"></rect>
           <rect height="3.6"></rect>

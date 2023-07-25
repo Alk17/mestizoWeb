@@ -9,8 +9,8 @@
       <span class="absolute pl-6 text-gray-900 bg-white text-3xl font-bold text-end">Conócenos</span>
     </div>
 
-    <div class="col-span-10 col-start-2 grid grid-cols-2 mx-auto mt-12">
-      <div class="space-y-5">
+    <div class="col-span-10 col-start-2 grid md:grid-cols-2 mx-auto mt-6 md:mt-16">
+      <div class="space-y-8">
         <p>
           Mestizo exprés es una marca de Mestizo café. Un café gourmet
           originario de hacienda Galera Quemada en Santa Ana. El propósito de
@@ -29,7 +29,7 @@
       </div>
 
       <div class="grid place-content-center text-center">
-        <img alt="" src="../assets/LogoAnimated.gif">
+        <img alt="" src="../assets/brand/LogoAnimated.gif">
       </div>
 
     </div>
