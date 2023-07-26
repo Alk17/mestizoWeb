@@ -1,5 +1,5 @@
 <script setup>
-import NavBar from "./components/Navbar.vue";
+import NavBar from "./components/nav/Navbar.vue";
 import Slider from "./components/slider/Slider.vue";
 import Main from "./views/Main.vue";
 import Footer from "./components/Footer.vue";
