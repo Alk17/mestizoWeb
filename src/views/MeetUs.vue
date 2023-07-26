@@ -12,8 +12,8 @@
     </div>
 
     <div class="mt-10 md:mt-16 items-center col-span-10 col-start-2 mx-auto grid grid-cols-12">
-      <img alt="" class="rounded-xl col-span-10 col-start-2 md:col-span-3 md:col-start-1 shadow-2xl" src="../assets/images/CanInHand.jpg">
-      <div class="h-80 place-self-center col-start-2 col-span-10 md:col-start-1 md:col-span-9
+      <img alt="" class="rounded-xl col-span-10 col-start-2 md:col-span-4 lg:col-span-3 shadow-2xl" src="../assets/images/CanInHand.jpg">
+      <div class="h-80 place-self-center col-start-2 col-span-10 md:col-span-8 lg:col-span-9
           backdrop-blur-md shadow-2xl bg-white/40 p-6 mt-6 md:mt-0 rounded-xl md:rounded-r-xl drop-shadow-2xl">
         <p class="items-center">
           Ahora ya puedes encontrar tus sabores favoritos de Mestizo en tu supermercado más cercano.

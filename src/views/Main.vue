@@ -8,8 +8,10 @@ defineProps({
 
 <template>
       <div class="max-w-screen-2xl mx-auto h-screen grid grid-cols-10 place-content-center">
-        <div class="col-span-10 md:col-span-4 lg:col-span-6 xl:col-span-5">
-          <div class="space-y-10  mt-12 md:mt-0">
+        <div class="col-span-10  md:col-span-4 lg:col-span-6 xl:col-span-5
+
+        flex items-center">
+          <div class="space-y-10 mt-12 md:mt-0">
             <div class="font-poppins font-extrabold uppercase text-4xl md:text-6xl text-white">
               <h1>Recargate</h1>
               <h1>naturalmente</h1>
@@ -30,8 +32,9 @@ defineProps({
           </div>
         </div>
 
-        <div class="col-span-4 lg:col-span-4 xl:col-span-5">
-          <img class="transform -rotate-12 h-[14rem] lg:h-[28rem] xl:h-[46rem] mx-auto" src="/images/BlackMorning.png">
+        <div class="col-span-4 md:col-span-10 lg:col-span-4 xl:col-span-5">
+          <img class="transform -rotate-12 md:rotate-12 h-[14rem] md:h-[20rem] md:mt-10
+           lg:h-[28rem] xl:h-[46rem] mx-auto" src="/images/BlackMorning.png">
         </div>
       </div>
 
