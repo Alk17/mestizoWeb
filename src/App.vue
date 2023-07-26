@@ -24,6 +24,5 @@ import MeetUs from "./views/MeetUs.vue";
     <MeetUs id="encuentranos" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
     <Footer/>
   </div>
-
 </template>
 

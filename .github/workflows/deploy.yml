@@ -43,7 +43,7 @@ jobs:
         with:
           name: mestizoBuild-files
           path: ./dist
-          
+
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
