@@ -5,6 +5,7 @@ import Navlink from "./Navlink.vue";
 const scrollPosition = ref(null);
 let mainDivider = null;
 const showNav = ref(false);
+const expandedMenu = ref(null);
 
 function updateScroll() {
   let dividerBounding = mainDivider.getBoundingClientRect();
@@ -14,6 +15,8 @@ function updateScroll() {
 onMounted(() => {
   mainDivider = document.getElementById('nav-divider');
   window.addEventListener('scroll', updateScroll);
+  //expandedMenu.value.getBoundingClientRect();
+
 })
 
 function toggle() {
@@ -24,10 +27,10 @@ function toggle() {
 
 <template>
   <header>
-    <nav class="fixed w-full z-20 top-0 left-0 backdrop-blur-lg">
-      <div class="grid grid-cols-12">
+    <nav class="fixed w-full z-20 top-0 left-0 md:flex md:flex-row md:justify-between max-w-screen-2xl">
+      <div class="grid grid-cols-12 backdrop-blur-md">
         <div class="col-span-10 col-start-2">
-          <div class="max-w-screen-2xl flex flex-wrap items-center justify-between py-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-between py-4 mx-auto">
 
             <a class="flex items-center" href="#mestizo">
               <div v-if="scrollPosition >= 0" class="flex items-center">
@@ -53,26 +56,33 @@ function toggle() {
               </svg>
             </button>
 
-            <div
-                 :class="[showNav ? 'flex' : 'hidden' ]"
-                 class="items-center w-full justify-between md:flex md:w-auto">
-              <ul class="flex flex-col p-4 w-full md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 font-medium"
-                  :class="{
-                'text-white' : scrollPosition >= 0,
-                'text-black' : scrollPosition < 0,
-              }">
-
-                <Navlink href="#conocenos" label="Conócenos"></Navlink>
-                <Navlink href="#nuestrocafe" label="Nuestro café"></Navlink>
-                <Navlink href="#valoragregado" label="Valor agregado"></Navlink>
-                <Navlink href="#encuentranos" label="Encuéntranos"></Navlink>
-
-              </ul>
-            </div>
-
           </div>
         </div>
       </div>
+
+      <div :class="[showNav ? 'scale-x-100' : ' -translate-x-[125%] scale-x-0 md:-translate-x-0 md:scale-x-100' ]"
+           class="grid grid-cols-12 backdrop-blur-md transition-all duration-700 h-screen md:h-auto">
+        <div ref="expandedMenu"
+
+             class="items-center w-full  justify-between md:flex
+           md:w-auto  col-span-10 col-start-2
+                  md:-translate-x-0">
+          <ul :class="{
+                'text-white' : scrollPosition >= 0,
+                'text-black' : scrollPosition < 0,
+              }"
+              class="flex flex-col p-4 w-full md:p-0 md:flex-row md:space-x-8 md:mt-0 font-medium">
+
+            <Navlink href="#conocenos" label="Conócenos"></Navlink>
+            <Navlink href="#nuestrocafe" label="Nuestro café"></Navlink>
+            <Navlink href="#valoragregado" label="Valor agregado"></Navlink>
+            <Navlink href="#encuentranos" label="Encuéntranos"></Navlink>
+
+          </ul>
+        </div>
+      </div>
+
+
     </nav>
 
   </header>
