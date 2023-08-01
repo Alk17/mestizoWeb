@@ -26,7 +26,10 @@ defineProps({
           hover:bg-white hover:text-black
           hover:outline hover:outline-offset-2 hover:outline-white
           focus:bg-[#d8325e] focus:outline focus:outline-offset-2 focus:outline-[#d8325e]
-          ease-in-out duration-100">Menú
+          ease-in-out duration-100">
+                <a href="#nuestrocafe">
+                Menú
+                </a>
               </button>
             </div>
           </div>

@@ -1,16 +1,19 @@
 <script setup>
 import Card from "./Card.vue";
-import {onMounted, ref} from "vue";
+import {ref} from "vue";
+import {register} from 'swiper/element/bundle';
+
+register();
 
 let interval = null;
 const activeSlide = ref(1);
 let slide = false;
 
-const slides = [{
-    title: "Black morning",
-    description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
-    image: "BlackMorning.png"
-  },
+const slides = ref([{
+  title: "Black morning",
+  description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
+  image: "BlackMorning.png"
+},
   {
     title: "Choco Latte",
     description: "Bebida de café con leche con un delicioso toque de chocolate puro como acentuador del sabor.",
@@ -30,40 +33,8 @@ const slides = [{
     title: "Skimmed Milk",
     description: "Bebida de café con leche descremada, para disfrutar sin preocupaciones.",
     image: "SkimmedMilk.png"
-  }]
+  }]);
 
-onMounted(() => {
-  switchInterval();
-})
-
-function next() {
-  if (activeSlide.value < slides.length - 1)
-    activeSlide.value++;
-  else
-    activeSlide.value = 0;
-}
-
-function prev() {
-  activeSlide.value--;
-}
-
-function switchInterval() {
-  if (interval !== null) clearInterval(interval);
-  interval = setInterval(() => {
-    next();
-    slide = true;
-  }, 2000)
-}
-
-function getPosition(index) {
-  if (activeSlide.value === index)
-    return 'C';
-  if (activeSlide.value - 1 === index || (activeSlide.value === 0 && index === slides.length - 1))
-    return 'L';
-  if (activeSlide.value + 1 === index || (activeSlide.value === slides.length - 1 && index === 0))
-    return 'R';
-  return null;
-}
 </script>
 
 <template>
@@ -74,27 +45,27 @@ function getPosition(index) {
       ">¡Disfrúta de la variedad y frescura!</span>
     </div>
 
-    <div class="col-span-10 col-start-2">
-      <div class="grid grid-cols-1 md:grid-cols-3 mt-24">
-        <div v-for="(slide, index) in slides" :class="{
-       'order-1 transition -translate-x-full': getPosition(index) === 'L',
-       'order-2 transition -translate-x-full': getPosition(index) === 'C',
-       'order-3 transition -translate-x-full': getPosition(index) === 'R',
-       'hidden': getPosition(index) == null,
-        }">
+    <div class="col-span-10 col-start-2 mt-16">
+      <swiper-container autoplay-delay="3000" autoplay-pause-on-mouse-enter="true"
+                        centeredSlides="true" coverflow-effect-rotate="0"
+                        coverflow-effect-scale="0.75" coverflow-effect-slide-shadows="false"
+                        effect="coverflow"
+                        loop="true"
+                        navigation="true"
+                        slides-per-view="3"
+                        speed="1000"
+                        breakpoints>
+        <swiper-slide v-for="(slide, index) in slides" slidesPerView="3">
           <Card :key="index"
-                :class="{
-              'scale-110 z-10': activeSlide === index,
-              'scale-100 z-0': activeSlide !== index,
-              'translate-x-full': slide
-            }"
                 :description="slide.description"
                 :image="slide.image"
-                :title="slide.title"
-                class=""
-          />
-        </div>
-      </div>
+                :title="slide.title"/>
+        </swiper-slide>
+      </swiper-container>
     </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>

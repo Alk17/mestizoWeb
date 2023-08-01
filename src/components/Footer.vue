@@ -21,9 +21,10 @@
           <div class="grid grid-cols-12">
             <div class="col-span-12 md:col-span-4 text-white">
               <p class="text-center md:text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at lectus sollicitudin, dignissim
-                libero nec, efficitur leo. Etiam fermentum odio vel lorem ultricies pellentesque. Nam eu posuere
-                mauris, ac feugiat libero.
+                Mestizo exprés es una marca desarrollada por
+                <a href="https://www.behance.net/franc_isco" target="_blank">
+                  Franc Isco
+                </a>
               </p>
             </div>
 

@@ -6,6 +6,10 @@ import Footer from "./components/Footer.vue";
 import ValueAdded from "./views/ValueAdded.vue";
 import AboutUs from "./views/AboutUs.vue";
 import MeetUs from "./views/MeetUs.vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import Card from "./components/slider/Card.vue";
 </script>
 
 <template>
@@ -17,10 +21,9 @@ import MeetUs from "./views/MeetUs.vue";
         <Main/>
       </div>
     </div>
-
     <AboutUs id="conocenos" class="mt-10 md:mt-20 scroll-mt-[80px]"/>
     <Slider id="nuestrocafe" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
-    <ValueAdded id="valoragregado" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
+    <ValueAdded id="valoragregado" class="mt-10 md:mt-16  scroll-mt-[80px]"/>
     <MeetUs id="encuentranos" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
     <Footer/>
   </div>
