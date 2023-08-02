@@ -1,19 +1,31 @@
 <script setup>
 import Card from "./Card.vue";
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 import {register} from 'swiper/element/bundle';
 
 register();
 
-let interval = null;
-const activeSlide = ref(1);
-let slide = false;
 
-const slides = ref([{
-  title: "Black morning",
-  description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
-  image: "BlackMorning.png"
-},
+onMounted(() => {
+const swiper = document.querySelector('swiper-container');
+
+swiper.breakpoints = {
+  920: {
+    slidesPerView: 3,
+    loop: true,
+    autoplay: true,
+
+  }
+}
+})
+
+
+const slides = ref([
+  {
+    title: "Black morning",
+    description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
+    image: "BlackMorning.png"
+  },
   {
     title: "Choco Latte",
     description: "Bebida de café con leche con un delicioso toque de chocolate puro como acentuador del sabor.",
@@ -33,7 +45,8 @@ const slides = ref([{
     title: "Skimmed Milk",
     description: "Bebida de café con leche descremada, para disfrutar sin preocupaciones.",
     image: "SkimmedMilk.png"
-  }]);
+  }
+]);
 
 </script>
 
@@ -46,18 +59,19 @@ const slides = ref([{
     </div>
 
     <div class="col-span-10 col-start-2 mt-16">
-      <swiper-container autoplay-delay="3000" autoplay-pause-on-mouse-enter="true"
-                        centeredSlides="true" coverflow-effect-rotate="0"
-                        coverflow-effect-scale="0.75" coverflow-effect-slide-shadows="false"
+      <swiper-container autoplay-delay="3000"
+                        autoplay-pause-on-mouse-enter="true"
+                        centeredSlides="true"
+                        coverflow-effect-rotate="0" coverflow-effect-scale="0.75"
+                        coverflow-effect-slide-shadows="false"
                         effect="coverflow"
                         loop="true"
                         navigation="true"
-                        slides-per-view="3"
+                        slides-per-view="1"
                         speed="1000"
-                        breakpoints>
-        <swiper-slide v-for="(slide, index) in slides" slidesPerView="3">
-          <Card :key="index"
-                :description="slide.description"
+                        >
+        <swiper-slide v-for="slide in [...slides, ...slides]">
+          <Card :description="slide.description"
                 :image="slide.image"
                 :title="slide.title"/>
         </swiper-slide>
@@ -65,7 +79,3 @@ const slides = ref([{
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>

@@ -5,5 +5,11 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   assetsInclude:['**/*.m4v'],
   base: '/mestizoWeb/',
-  plugins: [vue()],
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) =>['swiper-container', 'swiper-slide'].includes(tag),
+      }
+    }
+  })],
 })
