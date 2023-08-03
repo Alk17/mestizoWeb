@@ -14,7 +14,7 @@ export default {
         zilla: ['Zilla Slab', 'serif']
       },
       backgroundImage: {
-        'coffeeBeans': "url('/src/assets/images/coffeeBeans.jpg')"
+        'coffeeBeans': "url('/src/assets/images/coffeeBeans.webp')"
       }
     },
   },
