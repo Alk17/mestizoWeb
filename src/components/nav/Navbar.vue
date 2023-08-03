@@ -1,6 +1,6 @@
 <script setup>
 import {onMounted, ref} from "vue";
-import Navlink from "./Navlink.vue";
+import NavLink from "./Navlink.vue";
 
 const scrollPosition = ref(null);
 let mainDivider = null;
@@ -41,9 +41,9 @@ function toggle() {
               </div>
             </a>
 
-            <button class="inline-flex items-center p-2 w-10 h-10 focus:bg-transparent
+            <button :class="[scrollPosition >= 0 ? 'text-white' : 'text-[#ff478b]']"
+                    class="inline-flex items-center p-2 w-10 h-10 focus:bg-transparent
                     justify-center text-sm  rounded-lg lg:hidden"
-                    :class="[scrollPosition >= 0 ? 'text-white' : 'text-[#ff478b]']"
                     type="button"
                     v-on:click="toggle">
               <span class="sr-only">Open main menu</span>
@@ -55,23 +55,21 @@ function toggle() {
             </button>
 
             <div
-                 :class="[showNav ? 'max-h-[176px]' : 'max-h-0' ]"
-                 class="items-center w-full justify-between lg:max-h-[176px] lg:flex lg:w-auto overflow-y-hidden
+                :class="[showNav ? 'max-h-[176px]' : 'max-h-0' ]"
+                class="items-center w-full justify-between lg:max-h-[176px] lg:flex lg:w-auto overflow-y-hidden
                       transition-[max-height] duration-500">
-              <ul class="flex flex-col p-4 w-full lg:p-0 mt-4 lg:flex-row lg:space-x-8 lg:mt-0 font-medium"
-                  :class="{
+              <ul :class="{
                 'text-white' : scrollPosition >= 0,
                 'text-black' : scrollPosition < 0,
-              }">
+              }"
+                  class="flex flex-col p-4 w-full lg:p-0 mt-4 lg:flex-row lg:space-x-8 lg:mt-0 font-medium">
 
-                <Navlink href="#conocenos" label="Conócenos"/>
-                <Navlink href="#nuestrocafe" label="Nuestro café"/>
-                <Navlink href="#valoragregado" label="Valor agregado"/>
-                <Navlink href="#encuentranos" label="Encuéntranos"/>
-
+                <NavLink href="#conocenos" label="Conócenos"/>
+                <NavLink href="#nuestrocafe" label="Nuestro café"/>
+                <NavLink href="#valoragregado" label="Valor agregado"/>
+                <NavLink href="#encuentranos" label="Encuéntranos"/>
               </ul>
             </div>
-
           </div>
         </div>
       </div>

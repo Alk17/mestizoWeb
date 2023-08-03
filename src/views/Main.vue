@@ -1,11 +1,3 @@
-<script setup>
-
-defineProps({
-  msg: String,
-})
-
-</script>
-
 <template>
   <div class="max-w-screen-2xl mx-auto h-screen grid grid-cols-10 place-content-center">
     <div class="col-span-10 mt-16 lg:my-auto md:col-span-6 lg:col-span-6
@@ -32,15 +24,13 @@ defineProps({
             </a>
           </button>
         </div>
-
       </div>
     </div>
 
     <div class="col-span-4 col-end-11 xl:col-span-5">
-      <img class="transform rotate-12 lg:my-auto h-[16rem] md:h-[20rem]
+      <img alt="BlackMorning" class="transform rotate-12 lg:my-auto h-[16rem] md:h-[20rem]
            lg:h-[28rem] xl:h-[35rem] md:mt-10 mx-auto" src="/images/BlackMorningHQ.webp"
            srcset="/images/BlackMorning.webp 767w, /images/BlackMorningHQ.webp 1200w">
     </div>
   </div>
-
 </template>
