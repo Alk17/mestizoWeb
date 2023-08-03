@@ -42,30 +42,32 @@ function toggle() {
             </a>
 
             <button class="inline-flex items-center p-2 w-10 h-10 focus:bg-transparent
-                    justify-center text-sm text-white rounded-lg md:hidden"
+                    justify-center text-sm  rounded-lg lg:hidden"
+                    :class="[scrollPosition >= 0 ? 'text-white' : 'text-[#ff478b]']"
                     type="button"
                     v-on:click="toggle">
               <span class="sr-only">Open main menu</span>
               <svg aria-hidden="true" class="w-5 h-5" fill="none" viewBox="0 0 17 14"
                    xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1h15M1 7h15M1 13h15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2"/>
+                <path d="M1 1h15M1 7h15M1 13h15" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2"/>
               </svg>
             </button>
 
             <div
-                 :class="[showNav ? 'flex' : 'hidden' ]"
-                 class="items-center w-full justify-between md:flex md:w-auto">
-              <ul class="flex flex-col p-4 w-full md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 font-medium"
+                 :class="[showNav ? 'max-h-[176px]' : 'max-h-0' ]"
+                 class="items-center w-full justify-between lg:max-h-[176px] lg:flex lg:w-auto overflow-y-hidden
+                      transition-[max-height] duration-500">
+              <ul class="flex flex-col p-4 w-full lg:p-0 mt-4 lg:flex-row lg:space-x-8 lg:mt-0 font-medium"
                   :class="{
                 'text-white' : scrollPosition >= 0,
                 'text-black' : scrollPosition < 0,
               }">
 
-                <Navlink href="#conocenos" label="Conócenos"></Navlink>
-                <Navlink href="#nuestrocafe" label="Nuestro café"></Navlink>
-                <Navlink href="#valoragregado" label="Valor agregado"></Navlink>
-                <Navlink href="#encuentranos" label="Encuéntranos"></Navlink>
+                <Navlink href="#conocenos" label="Conócenos"/>
+                <Navlink href="#nuestrocafe" label="Nuestro café"/>
+                <Navlink href="#valoragregado" label="Valor agregado"/>
+                <Navlink href="#encuentranos" label="Encuéntranos"/>
 
               </ul>
             </div>
@@ -74,6 +76,5 @@ function toggle() {
         </div>
       </div>
     </nav>
-
   </header>
 </template>

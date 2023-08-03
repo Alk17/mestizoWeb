@@ -9,7 +9,7 @@ const props = defineProps({
 <template>
   <div class="grid mx-auto justify-items-center content-end relative h-[31rem] w-fit">
     <div class="absolute z-10">
-      <img :src="'images/' + image" alt="Beverage" class="w-auto h-[22rem]">
+      <img :src="'images/' + image" alt="Beverage" width="100" height="257.63" class="w-auto h-[22rem]">
     </div>
 
     <div class="grid content-end rounded-xl backdrop-blur-xl bg-white/30

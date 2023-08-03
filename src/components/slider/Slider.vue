@@ -14,7 +14,6 @@ swiper.breakpoints = {
     slidesPerView: 3,
     loop: true,
     autoplay: true,
-
   }
 }
 })
@@ -24,27 +23,27 @@ const slides = ref([
   {
     title: "Black morning",
     description: "Bebida preparada de café tipo negro ideal para quienes quieren iniciar el día con energía.",
-    image: "BlackMorning.png"
+    image: "BlackMorning.webp"
   },
   {
     title: "Choco Latte",
     description: "Bebida de café con leche con un delicioso toque de chocolate puro como acentuador del sabor.",
-    image: "ChocoLatte.png"
+    image: "ChocoLatte.webp"
   },
   {
     title: "K Puccino",
     description: "Bebida de café con leche, bajo en grasa para los amantes de los cappuccinos.",
-    image: "Kpuccino.png"
+    image: "Kpuccino.webp"
   },
   {
     title: "Mistik Ccinno",
     description: "Bebida de café con leche natural de almendras, panela y un desafiante toque de canela.",
-    image: "MistikCcino.png"
+    image: "MistikCcino.webp"
   },
   {
     title: "Skimmed Milk",
     description: "Bebida de café con leche descremada, para disfrutar sin preocupaciones.",
-    image: "SkimmedMilk.png"
+    image: "SkimmedMilk.webp"
   }
 ]);
 
