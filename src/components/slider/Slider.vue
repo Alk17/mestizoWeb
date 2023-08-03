@@ -5,19 +5,16 @@ import {register} from 'swiper/element/bundle';
 
 register();
 
-
 onMounted(() => {
-const swiper = document.querySelector('swiper-container');
-
-swiper.breakpoints = {
-  920: {
-    slidesPerView: 3,
-    loop: true,
-    autoplay: true,
+  const swiper = document.querySelector('swiper-container');
+  swiper.breakpoints = {
+    920: {
+      slidesPerView: 3,
+      loop: true,
+      autoplay: true,
+    }
   }
-}
 })
-
 
 const slides = ref([
   {
@@ -46,7 +43,6 @@ const slides = ref([
     image: "SkimmedMilk.webp"
   }
 ]);
-
 </script>
 
 <template>
@@ -64,11 +60,8 @@ const slides = ref([
                         coverflow-effect-rotate="0" coverflow-effect-scale="0.75"
                         coverflow-effect-slide-shadows="false"
                         effect="coverflow"
-                        loop="true"
-                        navigation="true"
-                        slides-per-view="1"
-                        speed="1000"
-                        >
+                        loop="true" navigation="true"
+                        slides-per-view="1" speed="1000">
         <swiper-slide v-for="slide in [...slides, ...slides]">
           <Card :description="slide.description"
                 :image="slide.image"

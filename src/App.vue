@@ -11,7 +11,6 @@ import 'swiper/css';
 
 <template>
   <div class="font-montserrat font-light">
-
     <div class="grid grid-cols-12 bg-gradient-to-tl from-[#50f1ec] to-[#e613be]">
       <div class="col-span-10 col-start-2 relative">
         <NavBar id="mestizo"/>
@@ -33,4 +32,3 @@ import 'swiper/css';
     <Footer/>
   </div>
 </template>
-

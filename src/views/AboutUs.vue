@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="grid grid-cols-12 max-w-screen-2xl mx-auto">
     <div class="col-span-10 col-start-2 inline-flex items-center justify-end">

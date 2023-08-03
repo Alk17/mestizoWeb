@@ -1,9 +1,4 @@
-<script setup>
-
-</script>
-
 <template>
-
   <footer>
     <div class="relative grid grid-cols-12 bg-gradient-to-tl
     from-[#50f1ec] to-[#e613be] mt-14 h-full content-between">
@@ -24,7 +19,7 @@
             flex items-center justify-center">
               <p>
                 Mestizo exprés es una marca diseñada por
-                <a href="https://www.behance.net/franc_isco" target="_blank" class="hover:underline">
+                <a class="hover:underline" href="https://www.behance.net/franc_isco" target="_blank">
                   Franc Isco.
                 </a>
               </p>
@@ -75,5 +70,4 @@
       </div>
     </div>
   </footer>
-
 </template>
