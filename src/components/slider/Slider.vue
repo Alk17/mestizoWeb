@@ -49,7 +49,7 @@ const slides = ref([
   <div class="text-center grid grid-cols-12 max-w-screen-2xl mx-auto">
     <div class="col-span-10 col-start-2 inline-flex items-center justify-center w-full">
       <hr class="w-full h-px my-8 bg-[#ff5192] border-0">
-      <span class="absolute px-6 text-gray-900 bg-white text-3xl font-bold text-end
+      <span class="absolute px-6 text-gray-900 bg-white text-3xl font-bold text-center
       ">¡Disfrúta de la variedad y frescura!</span>
     </div>
 

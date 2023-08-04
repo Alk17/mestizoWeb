@@ -11,8 +11,8 @@ import 'swiper/css';
 
 <template>
   <div class="font-montserrat font-light">
-    <div class="grid grid-cols-12 bg-gradient-to-tl from-[#50f1ec] to-[#e613be]">
-      <div class="col-span-10 col-start-2 relative">
+    <div class="relative grid grid-cols-12 bg-gradient-to-tl from-[#50f1ec] to-[#e613be]">
+      <div class="col-span-10 col-start-2">
         <NavBar id="mestizo"/>
         <Main/>
       </div>
@@ -25,10 +25,10 @@ import 'swiper/css';
       </div>
 
     </div>
-    <AboutUs id="conocenos" class="mt-10 md:mt-20 scroll-mt-[80px]"/>
+    <AboutUs id="conocenos" class="mt-12 md:mt-20 scroll-mt-[80px]"/>
     <Slider id="nuestrocafe" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
     <ValueAdded id="valoragregado" class="mt-10 md:mt-16  scroll-mt-[80px]"/>
-    <MeetUs id="encuentranos" class="mt-10 md:mt-20  scroll-mt-[80px]"/>
+    <MeetUs id="encuentranos" class="mt-16 md:mt-20  scroll-mt-[80px]"/>
     <Footer/>
   </div>
 </template>
