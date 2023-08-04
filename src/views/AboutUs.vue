@@ -5,7 +5,7 @@
       <span class="absolute pl-6 text-gray-900 bg-white text-3xl font-bold text-end">Conócenos</span>
     </div>
 
-    <div class="col-span-10 col-start-2 grid md:grid-cols-2 mx-auto mt-6 md:mt-16">
+    <div class="col-span-10 col-start-2 grid md:grid-cols-2 items-center mx-auto mt-6 md:mt-14">
       <div class="space-y-8">
         <p>
           Mestizo exprés es una marca de Mestizo café. Un café gourmet
@@ -18,14 +18,14 @@
         <p>
           El café Pacamara es originario de EI Salvador y surge por
           el cruce/mestizaje entre las variedades Pacas y Maragogipe Rojo.
-          Siendo en si la escencia de la marca. Un mestizaje de sabores entre
+          Siendo en si la esencia de la marca. Un mestizaje de sabores entre
           el mismo café y la combinación de ingredientes de la variedad de
           bebidas con que cuenta Mestizo.
         </p>
       </div>
 
-      <div class="grid place-content-center text-center">
-        <img alt="" src="../assets/brand/LogoAnimated.gif">
+      <div class="grid place-content-center text-center mt-8 md:mt-0">
+        <img alt="Logo animado" src="../assets/brand/LogoAnim.gif" height="440" width="440" class="w-4/6 mx-auto">
       </div>
 
     </div>
