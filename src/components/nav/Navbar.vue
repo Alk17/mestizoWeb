@@ -31,13 +31,13 @@ function toggle() {
 
             <a class="flex items-center" href="#mestizo">
               <div v-if="scrollPosition >= 0" class="flex items-center">
-                <img alt="Logo" class="h-12 mr-5" src="../../assets/brand/LogoWhite.svg">
-                <img alt="Name" class="h-5 mr-5" src="../../assets/brand/NameWhite.svg">
+                <img alt="Logo" class="h-12 mr-5 fill-white" onload="SVGInject(this)" src="/src/assets/brand/Logo.svg">
+                <img alt="Name" class="h-5 mr-5 fill-white" onload="SVGInject(this)" src="/src/assets/brand/Name.svg">
               </div>
 
               <div v-else-if="scrollPosition < 0" class="flex items-center">
-                <img alt="Logo" class="h-12 mr-5" src="/src/assets/brand/LogoPink.svg">
-                <img alt="Name" class="h-5 mr-5" src="/src/assets/brand/NameBlue.svg">
+                <img alt="Logo" class="h-12 mr-5 fill-[#ff478b]" onload="SVGInject(this)" src="/src/assets/brand/Logo.svg">
+                <img alt="Name" class="h-5 mr-5 fill-[#0585f0]" onload="SVGInject(this)" src="/src/assets/brand/Name.svg">
               </div>
             </a>
 

@@ -26,8 +26,10 @@
             </div>
 
             <div class="col-span-10 col-start-2 mt-8 md:mt-0 md:col-span-4 md:col-start-10">
-              <a class="flex items-center justify-center" href="#mestizo">
-                <img alt="Logo" class="h-48" src="../assets/images/LogoSloganWhite.svg"/>
+              <a class="flex flex-col items-center justify-center" href="#mestizo">
+                <img alt="Logo" class="w-28" src="/src/assets/brand/Logo.svg"/>
+                <img alt="Logo" class="w-64 mt-4 mb-2" src="/src/assets/brand/Name.svg"/>
+                <img alt="Logo" class="w-60" src="/src/assets/brand/Slogan.svg"/>
               </a>
             </div>
           </div>
@@ -71,3 +73,5 @@
     </div>
   </footer>
 </template>
+<script setup>
+</script>
