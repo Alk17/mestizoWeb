@@ -10,10 +10,13 @@
           <h1>naturalmente</h1>
         </div>
 
-        <p class="font-medium text-sm md:text-base text-white">
-          Disfruta las cinco opciones especialmente creadas para diversificar tu paladar brindándote
-          la frescura de un delicioso café helado en cualquier momento y lugar.
-        </p>
+        <Transition appear>
+
+          <p class="font-medium text-sm md:text-base text-white">
+            Disfruta las cinco opciones especialmente creadas para diversificar tu paladar brindándote
+            la frescura de un delicioso café helado en cualquier momento y lugar.
+          </p>
+        </Transition>
 
         <div class="text-start md:text-start">
           <button class="bg-transparent p-2.5 px-14 rounded-full ease-in-out duration-100

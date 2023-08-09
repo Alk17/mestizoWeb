@@ -64,10 +64,10 @@ function toggle() {
               }"
                   class="flex flex-col p-4 w-full lg:p-0 mt-4 lg:flex-row lg:space-x-8 lg:mt-0 font-medium">
 
-                <NavLink href="#conocenos" label="Conócenos"/>
-                <NavLink href="#nuestrocafe" label="Nuestro café"/>
-                <NavLink href="#valoragregado" label="Valor agregado"/>
-                <NavLink href="#encuentranos" label="Encuéntranos"/>
+                <NavLink href="#conocenos" label="Conócenos" @click="showNav = false"/>
+                <NavLink href="#nuestrocafe" label="Nuestro café" @click="showNav = false"/>
+                <NavLink href="#valoragregado" label="Valor agregado" @click="showNav = false"/>
+                <NavLink href="#encuentranos" label="Encuéntranos" @click="showNav = false"/>
               </ul>
             </div>
           </div>
